@@ -3,7 +3,7 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { demoProfilePicture } from "../utils/constant";
 
-export default function ChannelCard({ channelDetail }) {
+export default function ChannelCard({ channelDetail, marginTop }) {
   return (
     <Box
       sx={{
@@ -15,6 +15,7 @@ export default function ChannelCard({ channelDetail }) {
         width: { xs: "356px", md: "320px" },
         height: "326px",
         margin: "auto",
+        marginTop,
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
